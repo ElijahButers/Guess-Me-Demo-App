@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_GuessMeDemoApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <slider width="1" alignment="center" value="0.59999999999999998" steps="5" id="pFH-qr-qqJ"/>
+                        <label width="136" alignment="center" text="Your guess is: 3" textAlignment="center" id="yUS-S0-4Z7"/>
+                        <button width="1" alignment="center" title="Guess!" id="9BU-jh-26Y"/>
+                        <label width="136" alignment="center" verticalAlignment="bottom" text="Press Guess to Start" id="1MX-bz-xuo">
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                        </label>
+                    </items>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="563" y="467"/>
         </scene>
     </scenes>
 </document>
