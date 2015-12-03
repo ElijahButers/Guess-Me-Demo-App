@@ -18,7 +18,9 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var guessLabel: WKInterfaceLabel!
     @IBOutlet var resultLabel: WKInterfaceLabel!
     
-
+    var guessNumber = 3
+    
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -37,6 +39,9 @@ class InterfaceController: WKInterfaceController {
     
     //Actions
     @IBAction func updateGuess(value: Float) {
+        
+        guessNumber = Int(value * 5)
+        guessLabel.setText("Your Guess is: \(guessNumber)")
     }
     @IBAction func startGuess() {
     }
