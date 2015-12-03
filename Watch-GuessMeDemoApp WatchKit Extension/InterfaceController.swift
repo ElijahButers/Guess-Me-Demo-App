@@ -11,6 +11,13 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    //Outlets
+    
+    @IBOutlet var guessSlider: WKInterfaceSlider!
+    @IBOutlet var guessLabel: WKInterfaceLabel!
+    @IBOutlet var resultLabel: WKInterfaceLabel!
+    
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -26,6 +33,12 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    //Actions
+    @IBAction func updateGuess(value: Float) {
+    }
+    @IBAction func startGuess() {
     }
 
 }

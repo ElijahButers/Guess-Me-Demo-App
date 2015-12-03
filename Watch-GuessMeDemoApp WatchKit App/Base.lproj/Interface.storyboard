@@ -10,13 +10,26 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_GuessMeDemoApp_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <slider width="1" alignment="center" value="0.59999999999999998" steps="5" id="pFH-qr-qqJ"/>
+                        <slider width="1" alignment="center" value="0.59999999999999998" steps="5" id="pFH-qr-qqJ">
+                            <connections>
+                                <action selector="updateGuess:" destination="AgC-eL-Hgc" id="h4n-47-E5a"/>
+                            </connections>
+                        </slider>
                         <label width="136" alignment="center" text="Your guess is: 3" textAlignment="center" id="yUS-S0-4Z7"/>
-                        <button width="1" alignment="center" title="Guess!" id="9BU-jh-26Y"/>
+                        <button width="1" alignment="center" title="Guess!" id="9BU-jh-26Y">
+                            <connections>
+                                <action selector="startGuess" destination="AgC-eL-Hgc" id="KUm-Ds-E7X"/>
+                            </connections>
+                        </button>
                         <label width="136" alignment="center" verticalAlignment="bottom" text="Press Guess to Start" id="1MX-bz-xuo">
                             <fontDescription key="font" type="system" pointSize="13"/>
                         </label>
                     </items>
+                    <connections>
+                        <outlet property="guessLabel" destination="yUS-S0-4Z7" id="8Cc-5E-gD4"/>
+                        <outlet property="guessSlider" destination="pFH-qr-qqJ" id="egJ-xv-JUz"/>
+                        <outlet property="resultLabel" destination="1MX-bz-xuo" id="amR-8K-uOT"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="563" y="467"/>
