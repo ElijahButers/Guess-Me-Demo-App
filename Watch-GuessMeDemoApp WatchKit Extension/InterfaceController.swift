@@ -44,6 +44,14 @@ class InterfaceController: WKInterfaceController {
         guessLabel.setText("Your Guess is: \(guessNumber)")
     }
     @IBAction func startGuess() {
+        
+        let randomNumber = Int(arc4random_uniform(6))
+        
+        if guessNumber == randomNumber {
+            resultLabel.setText("Correct. You win!")
+        } else {
+            resultLabel.setText("Wrong. The number is \(randomNumber)")
+        }
     }
 
 }
